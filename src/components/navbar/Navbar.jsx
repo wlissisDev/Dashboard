@@ -12,24 +12,30 @@ export const Navbar = () => {
       <div className="wrapper">
         <div className='search'>
           <input type="text" placeholder='Search...' />
-          <SearchOutlinedIcon />
+          <SearchOutlinedIcon className='icon' />
         </div>
         <div className="items">
           <div className="item">
-            <LanguageOutlinedIcon />
+            <LanguageOutlinedIcon className='icon' />
             English
           </div>
           <div className="item">
-            <DarkModeOutlinedIcon />
+            <DarkModeOutlinedIcon className='icon' />
           </div>
           <div className="item">
-            <NotificationsNoneOutlinedIcon />
+            <NotificationsNoneOutlinedIcon  className='icon' />
+            <div className="counter">1</div>
           </div>
           <div className="item">
-            <ChatBubbleOutlineOutlinedIcon />
+            <ChatBubbleOutlineOutlinedIcon className='icon' />
+            <div className="counter">2</div>
           </div>
           <div className="item">
-            <ListAltOutlinedIcon />
+            <ListAltOutlinedIcon className='icon' />
+          </div>
+          <div className="item">
+            <img src="https://img.freepik.com/vetores-premium/personagem-de-perfil-masculino-fofo-de-desenho-animado_539226-21.jpg?w=2000" alt="avatar" 
+            className='avatar'/>
           </div>
         </div>
       </div>
