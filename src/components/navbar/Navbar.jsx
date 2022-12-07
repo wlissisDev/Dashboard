@@ -6,7 +6,13 @@ import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNone
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import ListAltOutlinedIcon from '@mui/icons-material/ListAltOutlined';
 import './navbar.scss'
+
+import { useContext } from "react";
+import { DarkModeContext } from '../../context/darkModeContext'
+
 export const Navbar = () => {
+  const { dispatch } = useContext(DarkModeContext)
+
   return (
     <div className='navbar'>
       <div className="wrapper">
@@ -20,10 +26,13 @@ export const Navbar = () => {
             English
           </div>
           <div className="item">
-            <DarkModeOutlinedIcon className='icon' />
+            <DarkModeOutlinedIcon
+              className='icon'
+              style={{ cursor: "pointer" }}
+              onClick={() => dispatch({ type: "TOGGLE" })} />
           </div>
           <div className="item">
-            <NotificationsNoneOutlinedIcon  className='icon' />
+            <NotificationsNoneOutlinedIcon className='icon' />
             <div className="counter">1</div>
           </div>
           <div className="item">
@@ -34,8 +43,8 @@ export const Navbar = () => {
             <ListAltOutlinedIcon className='icon' />
           </div>
           <div className="item">
-            <img src="https://img.freepik.com/vetores-premium/personagem-de-perfil-masculino-fofo-de-desenho-animado_539226-21.jpg?w=2000" alt="avatar" 
-            className='avatar'/>
+            <img src="https://img.freepik.com/vetores-premium/personagem-de-perfil-masculino-fofo-de-desenho-animado_539226-21.jpg?w=2000" alt="avatar"
+              className='avatar' />
           </div>
         </div>
       </div>
